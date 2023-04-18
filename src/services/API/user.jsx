@@ -13,7 +13,7 @@ const getFollowers = () => {
 
 }
 
-const setFollowers = async (user) => {
+const setFollowers = (user) => {
   try {
     return localStorage.setItem('tweetUser', JSON.stringify(user))
   } catch (error) {

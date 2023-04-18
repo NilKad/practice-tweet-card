@@ -11,11 +11,7 @@ import { getFollowers, setFollowers } from "services/API/user"
 
 const TweetsPage = () => {
   const [tweetsList, setTweetsList] = useState([])
-
-  const localData = (getFollowers())
-  console.log('localdata: ', localData)
-
-  const [followersList, setFollowersList] = useState(JSON.parse(localStorage.getItem('tweetUser')))
+  const [followersList, setFollowersList] = useState(getFollowers())
 
   const getAllTweets = async () => {
     const data = await getTweets();
@@ -25,14 +21,11 @@ const TweetsPage = () => {
   const handleFollower = (id) => {
     if (followersList.includes(id)) {
       setFollowersList(prev => prev.filter(e => (e) !== (id)));
-      // console.log('followersList: ', followersList);
-      // setFollowers(followersList);
+      setFollowers(followersList);
       return
     }
     setFollowersList(prev => [...prev, id])
-    // console.log('followersList: ', followersList);
-    // setFollowers(followersList);
-
+    setFollowers(followersList);
   }
 
   useMemo(() => {
@@ -41,13 +34,12 @@ const TweetsPage = () => {
 
   useEffect(() => {
     getAllTweets();
-
   }, [])
 
   return (
     <Section  >
       <Container>
-        {tweetsList.length === 0 ?
+        {(tweetsList.length === 0) ?
           <p>No tweets</p> :
           <TweetsList tweetsList={tweetsList} handleFollower={handleFollower} followersList={followersList} />}
       </Container >
