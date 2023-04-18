@@ -1,8 +1,8 @@
 {
-  "name": "practice-tweet-card",
+  "name": "practice_tweet-card",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NilKad.github.io/practice-tweet-card",
+  "homepage": "https://nilkad.github.io/practice_tweet-card",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
