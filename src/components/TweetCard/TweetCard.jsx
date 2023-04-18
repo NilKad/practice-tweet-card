@@ -6,6 +6,7 @@ import avatarImg from 'images/avatar-photo.png'
 
 
 const TweetCard = ({ item, handleFollower, inList }) => {
+  const local = 'en-Gb'
   const { id, tweets, followers } = item;
   return <SC.Card>
     <SC.Top>
@@ -19,8 +20,8 @@ const TweetCard = ({ item, handleFollower, inList }) => {
       </SC.Avatar>
     </SC.Middle>
     <SC.Bottom>
-      <SC.TextTweets>{tweets} tweets</SC.TextTweets>
-      <SC.TextFollowers>{inList ? (followers + 1) : followers} Followers</SC.TextFollowers>
+      <SC.TextTweets>{new Intl.NumberFormat(local).format(tweets)} tweets</SC.TextTweets>
+      <SC.TextFollowers>{new Intl.NumberFormat(local).format(inList ? (followers + 1) : followers)} Followers</SC.TextFollowers>
       <SC.Button active={inList} onClick={() => handleFollower(id)}>{inList ? 'Following' : 'Follow'}</SC.Button>
     </SC.Bottom>
   </SC.Card>
