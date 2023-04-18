@@ -6,6 +6,7 @@ const getFollowers = () => {
       const data = JSON.parse(localStorage.getItem('tweetUser'))
       return data;
     }
+    localStorage.setItem('tweetUser', JSON.stringify([]))
     return []
   } catch (error) {
     console.log(error.message)
