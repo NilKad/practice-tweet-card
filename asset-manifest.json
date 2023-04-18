@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/practice-tweet-card/static/css/main.19c44b1d.css",
-    "main.js": "/practice-tweet-card/static/js/main.8260c6ae.js",
-    "static/media/tweet-header.png": "/practice-tweet-card/static/media/tweet-header.032662a2a907475127d7.png",
-    "static/media/logo.svg": "/practice-tweet-card/static/media/logo.e917114d7945c04c85a8946a331d28b6.svg",
-    "static/media/avatar-ringe.svg": "/practice-tweet-card/static/media/avatar-ringe.1565195426e0bbd2b926ddc738005c20.svg",
-    "index.html": "/practice-tweet-card/index.html",
-    "main.19c44b1d.css.map": "/practice-tweet-card/static/css/main.19c44b1d.css.map",
-    "main.8260c6ae.js.map": "/practice-tweet-card/static/js/main.8260c6ae.js.map"
+    "main.css": "/practice_tweet-card/static/css/main.19c44b1d.css",
+    "main.js": "/practice_tweet-card/static/js/main.5a3e79db.js",
+    "static/media/tweet-header.png": "/practice_tweet-card/static/media/tweet-header.032662a2a907475127d7.png",
+    "static/media/logo.svg": "/practice_tweet-card/static/media/logo.e917114d7945c04c85a8946a331d28b6.svg",
+    "static/media/avatar-ringe.svg": "/practice_tweet-card/static/media/avatar-ringe.1565195426e0bbd2b926ddc738005c20.svg",
+    "index.html": "/practice_tweet-card/index.html",
+    "main.19c44b1d.css.map": "/practice_tweet-card/static/css/main.19c44b1d.css.map",
+    "main.5a3e79db.js.map": "/practice_tweet-card/static/js/main.5a3e79db.js.map"
   },
   "entrypoints": [
     "static/css/main.19c44b1d.css",
-    "static/js/main.8260c6ae.js"
+    "static/js/main.5a3e79db.js"
   ]
 }
