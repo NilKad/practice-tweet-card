@@ -36,7 +36,7 @@ const TweetsPage = () => {
   return (
     <Section  >
       <Container>
-        {(tweetsList.length === 0) ?
+        {(tweetsList.length === 0 && !followersList) ?
           <p>No tweets</p> :
           <TweetsList tweetsList={tweetsList} handleFollower={handleFollower} followersList={followersList} />}
       </Container >
