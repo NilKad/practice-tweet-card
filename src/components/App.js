@@ -1,4 +1,3 @@
-// import './App.css';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
 import TweetsPage from 'pages/TweetPage';

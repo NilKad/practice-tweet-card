@@ -1,13 +1,14 @@
 import * as SC from "./TweetCard.styled"
-import logo from 'images/logo.svg'
-import headImg from 'images/tweet-header.png'
-import avatarDefault from 'images/avatar-ringe.svg'
-import avatarImg from 'images/avatar-photo.png'
+import logo from 'assets/images/logo.svg'
+import headImg from 'assets/images/tweet-header.png'
+import avatarDefault from 'assets/images/avatar-ringe.svg'
+import avatarImg from 'assets/images/avatar-photo.png'
 
 
-const TweetCard = ({ item, handleFollower, inList }) => {
+const TweetCard = ({ name, item, handleFollower, inList }) => {
   const local = 'en-Gb'
-  const { id, tweets, followers } = item;
+  const { id, tweets, followers, avatar: avatarUrl } = item;
+  const avatar = avatarUrl ? avatarUrl : avatarImg;
   return <SC.Card>
     <SC.Top>
       <SC.Logo src={logo} alt="logo" width='76px' />
@@ -16,7 +17,10 @@ const TweetCard = ({ item, handleFollower, inList }) => {
     <SC.Middle>
       <SC.Avatar>
         <SC.AvatarWrapper src={avatarDefault} alt="avatar-wrapper" width='90px' />
-        <SC.AvatarImg src={avatarImg} alt='avatar-img' width='62px' height='62px' />
+        <SC.AvatarImageWrapper >
+          <SC.AvatarImg src={avatar} alt='name' width='62px' height='62px' />
+
+        </SC.AvatarImageWrapper>
       </SC.Avatar>
     </SC.Middle>
     <SC.Bottom>
