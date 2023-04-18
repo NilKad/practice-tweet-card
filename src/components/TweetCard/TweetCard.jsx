@@ -1,7 +1,6 @@
 import * as SC from "./TweetCard.styled"
 import logo from 'images/logo.svg'
 import headImg from 'images/tweet-header.png'
-// import avatarDefault from 'images/avatar-full.png'
 import avatarDefault from 'images/avatar-ringe.svg'
 import avatarImg from 'images/avatar-photo.png'
 
@@ -21,7 +20,7 @@ const TweetCard = ({ item, handleFollower, inList }) => {
     </SC.Middle>
     <SC.Bottom>
       <SC.TextTweets>{tweets} tweets</SC.TextTweets>
-      <SC.TextFollowers>{followers} Followers</SC.TextFollowers>
+      <SC.TextFollowers>{inList ? (followers + 1) : followers} Followers</SC.TextFollowers>
       <SC.Button active={inList} onClick={() => handleFollower(id)}>{inList ? 'Following' : 'Follow'}</SC.Button>
     </SC.Bottom>
   </SC.Card>

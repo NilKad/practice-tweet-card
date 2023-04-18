@@ -99,16 +99,20 @@ export const Bottom = styled.div`
 
 export const TextTweets = styled.p`
   margin-bottom: 16px;
+  text-transform: uppercase;
 `;
 
 export const TextFollowers = styled.p`
   margin-bottom: 26px;
+  text-transform: uppercase;
 `;
 
 export const Button = styled.button`
   width: 196px;
   padding: 14px;
   border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
   background-color: ${props =>
     props.active ? baseColor.colors.active : baseColor.colors.textColor};
 `;

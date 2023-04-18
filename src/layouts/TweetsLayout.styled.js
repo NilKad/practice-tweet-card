@@ -16,7 +16,6 @@ export const Header = styled.header`
 `;
 
 export const HeaderContent = styled(Container)`
-  /* max-width: 480px; */
   margin: 0 auto;
   padding: 16px;
   display: flex;
@@ -27,12 +26,9 @@ export const HeaderContent = styled(Container)`
 export const NavMenuLink = styled(NavLink)`
   margin-right: 16px;
   &.active {
-    /* color: blue; */
     color: ${baseColor.colors.active};
-
     text-decoration: underline;
     text-underline-offset: 16px;
-    /* Толщина подчёркивания — 4 пикселя */
     text-decoration-thickness: 4px;
   }
   &:hover,
@@ -43,5 +39,4 @@ export const NavMenuLink = styled(NavLink)`
 
 export const Main = styled.main`
   height: 100%;
-  /* background-color: ${baseColor.colors.textColor}; */
 `;

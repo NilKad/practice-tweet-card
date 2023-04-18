@@ -1,7 +1,4 @@
-// import TweetsList from 'components/TweetList/TweetsList';
-
 import { Container, Section } from "components/BaseStyles/CommonStyle.styled"
-import TweetCard from "components/TweetCard/TweetCard"
 import TweetsList from "components/TweetList/TweetsList"
 import { useEffect, useMemo, useState } from "react"
 import { getTweets } from "services/API/getTweets"
