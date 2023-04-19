@@ -42,7 +42,6 @@ const TweetsPage = () => {
   }, [followersList])
 
   useEffect(() => {
-    console.log('useEffect')
     getAllTweets();
   }, [])
 
