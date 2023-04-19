@@ -45,7 +45,6 @@ const TweetsPage = () => {
   useMemo(() => {
     const newList = tweetsList.filter(({ id }) => {
       if (filter.value === filterValues[1]) {
-        console.log('follow');
         return !followersList.includes(id)
       }
       if (filter.value === filterValues[2]) {
