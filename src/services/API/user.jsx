@@ -4,6 +4,10 @@ const getFollowers = () => {
   try {
     if (localStorage.key('tweetUser')) {
       const data = JSON.parse(localStorage.getItem('tweetUser'))
+      if (!data) {
+        localStorage.setItem('tweetUser', JSON.stringify([]))
+        return []
+      }
       return data;
     }
     localStorage.setItem('tweetUser', JSON.stringify([]))
