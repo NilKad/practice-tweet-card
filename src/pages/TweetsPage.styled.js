@@ -1,4 +1,5 @@
 import { Button } from 'components/BaseStyles/CommonStyle.styled';
+import Select from 'react-select';
 import styled from 'styled-components';
 
 export const LoadMore = styled(Button)`
@@ -6,4 +7,9 @@ export const LoadMore = styled(Button)`
   margin: 16px auto 0;
 
   /* text-align: center; */
+`;
+
+export const Filter = styled(Select)`
+  width: 380px;
+  margin: 16px auto;
 `;

@@ -6,12 +6,16 @@ import * as SC from "./TweetsPage.styled"
 import { Container, Section } from "components/BaseStyles/CommonStyle.styled"
 
 const onPage = 8;
+const filterValues = ['show all', 'follow', 'following']
 
 const TweetsPage = () => {
   const [tweetsList, setTweetsList] = useState([])
   const [followersList, setFollowersList] = useState(getFollowers())
   const [page, setPage] = useState(1)
   const [isLoadMore, setIsLoadMore] = useState(true)
+  const filterOption = filterValues.map(e => ({ value: e, label: e }))
+  const [filter, setFilter] = useState(filterOption[0])
+  const [listForRender, setListForRender] = useState(tweetsList)
 
   const getAllTweets = async () => {
     const data = await getTweets(1, onPage);
@@ -37,9 +41,20 @@ const TweetsPage = () => {
     }
   }
 
+
   useMemo(() => {
-    setFollowers(followersList);
-  }, [followersList])
+    const newList = tweetsList.filter(({ id }) => {
+      if (filter.value === filterValues[1]) {
+        console.log('follow');
+        return !followersList.includes(id)
+      }
+      if (filter.value === filterValues[2]) {
+        return followersList.includes(id)
+      }
+      return true
+    })
+    setListForRender(newList)
+  }, [filter, followersList, tweetsList])
 
   useEffect(() => {
     getAllTweets();
@@ -49,9 +64,13 @@ const TweetsPage = () => {
   return (
     <Section >
       <Container>
-        {(tweetsList.length === 0 && followersList === null) ?
+        {(listForRender.length === 0 && followersList === null) ?
           <p>No tweets</p> :
-          <TweetsList tweetsList={tweetsList} handleFollower={handleFollower} followersList={followersList} />}
+          <>
+            <SC.Filter options={filterOption} defaultValue={filter} value={filter} onChange={setFilter} />
+            <TweetsList tweetsList={listForRender} handleFollower={handleFollower} followersList={followersList} />
+          </>
+        }
         {isLoadMore && <SC.LoadMore onClick={onLoadMore} >Load More</SC.LoadMore>}
       </Container >
     </Section >)
