@@ -92,12 +92,12 @@ export const TextFollowers = styled.p`
   text-transform: uppercase;
 `;
 
-export const Button = styled.button`
-  width: 196px;
-  padding: 14px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-weight: 600;
-  background-color: ${props =>
-    props.active ? baseColor.colors.active : baseColor.colors.textColor};
-`;
+// export const Button = styled.button`
+//   width: 196px;
+//   padding: 14px;
+//   border-radius: 10px;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   background-color: ${props =>
+//     props.active ? baseColor.colors.active : baseColor.colors.textColor};
+// `;

@@ -3,6 +3,7 @@ import logo from 'assets/images/logo.svg'
 import headImg from 'assets/images/tweet-header.png'
 import avatarDefault from 'assets/images/avatar-ringe.svg'
 import avatarImg from 'assets/images/avatar-photo.png'
+import { Button } from "components/BaseStyles/CommonStyle.styled"
 
 
 const TweetCard = ({ name, item, handleFollower, inList }) => {
@@ -26,7 +27,7 @@ const TweetCard = ({ name, item, handleFollower, inList }) => {
     <SC.Bottom>
       <SC.TextTweets>{new Intl.NumberFormat(local).format(tweets)} tweets</SC.TextTweets>
       <SC.TextFollowers>{new Intl.NumberFormat(local).format(inList ? (followers + 1) : followers)} Followers</SC.TextFollowers>
-      <SC.Button active={inList} onClick={() => handleFollower(id)}>{inList ? 'Following' : 'Follow'}</SC.Button>
+      <Button active={inList} onClick={() => handleFollower(id)}>{inList ? 'Following' : 'Follow'}</Button>
     </SC.Bottom>
   </SC.Card>
 }

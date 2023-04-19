@@ -6,3 +6,4 @@ export const baseColor = {
     active: '#5CD3A8',
   },
 };
+export const transition = 'linear 250ms';

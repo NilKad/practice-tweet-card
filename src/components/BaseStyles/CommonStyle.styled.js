@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { baseColor } from './Variables.styled';
+import { baseColor, transition } from './Variables.styled';
 
 const Section = styled.section`
   margin: ${props => props.margin || '0 auto'};
@@ -17,4 +17,19 @@ const Container = styled.div`
   padding: 0 16px;
 `;
 
-export { Container, Section };
+const Button = styled.button`
+  width: 196px;
+  padding: 14px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: ${props =>
+    props.active ? baseColor.colors.active : baseColor.colors.textColor};
+  cursor: pointer;
+  transition: all ${transition};
+  &:hover {
+    background-color: ${baseColor.colors.active};
+  }
+`;
+
+export { Container, Section, Button };
