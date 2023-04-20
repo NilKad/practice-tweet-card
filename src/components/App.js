@@ -4,14 +4,15 @@ import TweetsPage from 'pages/TweetPage';
 import TweetsLayout from 'layouts/TweetsLayout';
 
 function App() {
+  // const toHome = () => {};
   return (
     <Routes>
       <Route path="/" element={<TweetsLayout />}>
         <Route index element={<HomePage />} />
         <Route path="tweets" element={<TweetsPage />} />
-        <Route path="*" element={<HomePage />} />
+        {/* <Route path="*" element={<Navigate to="/" />} /> */}
       </Route>
-      <Route path="*" element={<HomePage />} />
+      <Route path="*" element={<Navigate to="/" replace={true} />} />
     </Routes>
   );
 }
