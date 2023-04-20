@@ -9,9 +9,9 @@ function App() {
       <Route path="/" element={<TweetsLayout />}>
         <Route index element={<HomePage />} />
         <Route path="tweets" element={<TweetsPage />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<HomePage />} />
       </Route>
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 }
