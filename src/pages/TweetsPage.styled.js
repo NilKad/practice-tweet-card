@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const LoadMore = styled(Button)`
   display: block;
   margin: 16px auto 0;
+  border: 1px solid grey;
 
   /* text-align: center; */
 `;

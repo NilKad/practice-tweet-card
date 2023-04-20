@@ -56,8 +56,16 @@ export const Avatar = styled.div`
   top: -35px;
   left: 50%;
   transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 8px solid ${baseColor.colors.borderColor};
+  /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff; */
 
-  width: 90px;
+  /* width: 90px; */
+  width: 80px;
+  height: 80px;
+
   border-radius: 50%;
   border-width: 9px;
   text-transform: uppercase;
@@ -69,9 +77,12 @@ export const AvatarImageWrapper = styled.div`
   width: 62px;
   height: 62px;
   position: absolute;
-  top: 9px;
+  top: 0px;
   overflow: hidden;
   border-radius: 50%;
+  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+    inset 0px -2.19582px 4.39163px #ae7be3,
+    inset 0px 4.39163px 3.29372px #fbf8ff;
 `;
 export const AvatarImg = styled.img``;
 

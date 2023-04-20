@@ -20,6 +20,7 @@ const Container = styled.div`
 const Button = styled.button`
   width: 196px;
   padding: 14px;
+  border: none;
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 600;

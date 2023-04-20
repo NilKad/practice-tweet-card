@@ -17,7 +17,7 @@ const TweetCard = ({ name, item, handleFollower, inList }) => {
     </SC.Top>
     <SC.Middle>
       <SC.Avatar>
-        <SC.AvatarWrapper src={avatarDefault} alt="avatar-wrapper" width='90px' />
+        {/* <SC.AvatarWrapper src={avatarDefault} alt="avatar-wrapper" width='90px' /> */}
         <SC.AvatarImageWrapper >
           <SC.AvatarImg src={avatar} alt='name' width='62px' height='62px' />
 
